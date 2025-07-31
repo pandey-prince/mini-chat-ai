@@ -11,7 +11,6 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static("public"));
 
-console.log("Gemini API Key:", process.env.GEMINI_API_KEY); // Debug
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
@@ -34,4 +33,4 @@ app.post("/generate", async (req, res) => {
   }
 });
 
-app.listen(3000, () => console.log("Server running on http://localhost:3000"));
+app.listen(3000);

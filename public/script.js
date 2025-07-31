@@ -8,7 +8,7 @@ async function sendPrompt() {
   loadingEl.style.display = "block"; // Show spinner
 
   try {
-    const res = await fetch("/generate", {
+    const res = await fetch("api/generate", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ prompt }),
@@ -20,8 +20,5 @@ async function sendPrompt() {
     responseEl.innerText = "Error: " + err.message;
   } finally {
     loadingEl.style.display = "none"; // Hide spinner
-    
   }
-  
-
 }
