@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gemini AI Chat</title>
+  <style>
+  body {
+    font-family: Arial, sans-serif;
+    padding: 2rem;
+    background: #f9f9f9;
+  }
+
+  h1 {
+    color: #333;
+  }
+
+  input {
+    padding: 8px;
+    width: 300px;
+    margin-right: 10px;
+  }
+
+  button {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+
+  #response {
+    margin-top: 2rem;
+    background: #e6f0ff;
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 4px solid #007bff;
+    white-space: pre-line;
+  }
+
+  #response h3, #response h2 {
+    margin-top: 1rem;
+    color: #0056b3;
+  }
+
+  #response ul {
+    padding-left: 20px;
+  }
+
+  #response strong {
+    color: #000;
+  }
+   #loading {
+    font-weight: bold;
+    color: #555;
+    margin-top: 20px;
+    animation: pulse 1s infinite;
+  }
+
+  @keyframes pulse {
+    0%   { opacity: 0.3; }
+    50%  { opacity: 1; }
+    100% { opacity: 0.3; }
+  }
+</style>
+
+</head>
+<body>
+  <h1>Ask Gemini AI</h1>
+  <input type="text" id="prompt" placeholder="Enter your question..." />
+  <button onclick="sendPrompt()">Send</button>
+  <h2>Gemini says:</h2>
+  <div id="loading" style="display: none;">⏳ Gemini is thinking...</div>
+  <div id="response"></div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
